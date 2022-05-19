@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_shape"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:text="Setting"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:text="Url : "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/etUrlWeb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etUrlWeb" />
+
+    <EditText
+        android:id="@+id/etUrlWeb"
+        android:layout_width="0dp"
+        android:textColor="@color/black"
+        android:textColorHint="#8A8A8A"
+        android:hint="https://www.example.com"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/bungee"
+        android:text="Jumlah Reload / Periode"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etUrlWeb" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReloadMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/teal_200"
+        android:fontFamily="@font/bungee"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/ctrReload"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/ctrReload"
+        android:text="1"
+        android:fontFamily="@font/bungee"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_width="64dp"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReloadMinus"
+        app:layout_constraintEnd_toStartOf="@+id/btnReloadPlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnReloadMinus"
+        app:layout_constraintTop_toTopOf="@+id/btnReloadMinus" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReloadPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:background="@color/teal_200"
+        android:fontFamily="@font/bungee"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/btnReloadMinus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ctrReload"
+        app:layout_constraintTop_toTopOf="@+id/btnReloadMinus" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/bungee"
+        android:text="Jumlah Periode : "
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/btnReloadMinus" />
+
+    <EditText
+        android:id="@+id/etPeriode"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/bungee"
+        android:hint="1"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="#D1D1D1"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <CheckBox
+        android:id="@+id/cbUnlimited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/bungee"
+        android:text="Unlimited"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/etPeriode"
+        app:layout_constraintTop_toBottomOf="@+id/etPeriode" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBatal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/bungee"
+        android:textColor="@color/black"
+        android:text="Batal"
+        android:background="#C8C8C8"
+        app:layout_constraintBottom_toBottomOf="@+id/btnSimpan"
+        app:layout_constraintEnd_toStartOf="@+id/btnSimpan"
+        app:layout_constraintTop_toTopOf="@+id/btnSimpan" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSimpan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/purple_700"
+        android:fontFamily="@font/bungee"
+        android:text="Simpan"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbUnlimited" />
+</androidx.constraintlayout.widget.ConstraintLayout>
